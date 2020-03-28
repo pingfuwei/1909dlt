@@ -23,7 +23,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#" style="color: #00b0e8">平富威的后台管理系统</a>
+            <a class="navbar-brand" href="#" style="color: #00b0e8">后台管理系统</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav" id="test">
@@ -33,25 +33,20 @@
                     <li ><a href="{{url('admin/create')}}">管理员模块</a></li>
                 @endif
                 @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\BrandController@create")
-                    <li style="background: gold"><a href="{{url('brand/create')}}">品牌模块</a></li>
+                    <li style="background: gold"><a href="{{url('brand/create')}}">业务员模块</a></li>
                 @else
-                    <li><a href="{{url('brand/create')}}">品牌模块</a></li>
+                    <li><a href="{{url('brand/create')}}">业务员模块</a></li>
                 @endif
                 @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\CategoryController@create")
-                    <li style="background:gold"><a href="{{url('Category/create')}}">分类模块</a></li>
+                    <li style="background:gold"><a href="{{url('Category/create')}}">客户模块</a></li>
                 @else
-                    <li ><a href="{{url('Category/create')}}">分类模块</a></li>
+                    <li ><a href="{{url('Category/create')}}">客户模块</a></li>
                 @endif
                 @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\GoodsController@create")
-                    <li style="background: gold"><a href="{{url('goods/create')}}">商品模块</a></li>
+                    <li style="background: gold"><a href="{{url('goods/create')}}">拜访会议模块</a></li>
                 @else
-                    <li ><a href="{{url('goods/create')}}">商品模块</a></li>
+                    <li ><a href="{{url('goods/create')}}">拜访会议模块</a></li>
                 @endif
-                    @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\WzController@create")
-                        <li style="background: gold"><a href="{{url('wz/create')}}">文章模块</a></li>
-                    @else
-                        <li ><a href="{{url('wz/create')}}">文章模块</a></li>
-                    @endif
             </ul>
             <img src="/8.jpg" width="50" height="50" style="float: right" alt="">
             <font style="padding-top: 15px;float: right;color: #ffffff">欢迎<b style="color: gold;">{{session("admin_name")}}</b>登陆后台系统</font>
