@@ -15,3 +15,13 @@
 //    return view('welcome');
 //});
 Route::any("/index","Controller@index");
+//拜访会议
+Route::prefix('acc')->group(function(){
+    Route::get('create','AccController@create');
+    Route::post('store','AccController@store');
+    Route::get('index','AccController@index');
+    Route::get('edit/{id}','AccController@edit');
+    Route::post('update/{id}','AccController@update');
+    Route::get('destroy/{id}','AccController@destroy');
+    Route::get('ajaxjd','AccController@ajaxjd');
+});

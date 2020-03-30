@@ -43,9 +43,9 @@
                     <li ><a href="{{url('Category/create')}}">客户模块</a></li>
                 @endif
                 @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\GoodsController@create")
-                    <li style="background: gold"><a href="{{url('goods/create')}}">拜访会议模块</a></li>
+                    <li style="background: gold"><a href="{{url('acc/create')}}">拜访会议模块</a></li>
                 @else
-                    <li ><a href="{{url('goods/create')}}">拜访会议模块</a></li>
+                    <li ><a href="{{url('acc/create')}}">拜访会议模块</a></li>
                 @endif
             </ul>
             <img src="/8.jpg" width="50" height="50" style="float: right" alt="">
