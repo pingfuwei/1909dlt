@@ -84,7 +84,7 @@ final class RegEx
 
         foreach ($results[0] as &$result) {
             if ($result[1] !== -1) {
-                // Only save the index if it hasn't been set yet
+                // Only save the admin if it hasn't been set yet
                 if ($index === null) {
                     $index = $result[1];
                 }

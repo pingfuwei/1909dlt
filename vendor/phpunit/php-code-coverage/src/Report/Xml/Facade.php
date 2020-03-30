@@ -61,7 +61,7 @@ final class Facade
         $this->processTests($coverage->getTests());
         $this->processDirectory($report, $this->project);
 
-        $this->saveDocument($this->project->asDom(), 'index');
+        $this->saveDocument($this->project->asDom(), 'admin');
     }
 
     private function setBuildInformation(): void

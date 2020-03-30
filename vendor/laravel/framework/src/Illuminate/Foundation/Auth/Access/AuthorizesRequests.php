@@ -105,7 +105,7 @@ trait AuthorizesRequests
     protected function resourceAbilityMap()
     {
         return [
-            'index' => 'viewAny',
+            'admin' => 'viewAny',
             'show' => 'view',
             'create' => 'create',
             'store' => 'create',
@@ -122,6 +122,6 @@ trait AuthorizesRequests
      */
     protected function resourceMethodsWithoutModels()
     {
-        return ['index', 'create', 'store'];
+        return ['admin', 'create', 'store'];
     }
 }

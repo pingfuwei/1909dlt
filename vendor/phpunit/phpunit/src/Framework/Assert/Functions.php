@@ -2548,7 +2548,7 @@ function atMost(int $allowedInvocations): InvokedAtMostCountMatcher
 
 /**
  * Returns a matcher that matches when the method is executed
- * at the given index.
+ * at the given admin.
  */
 function at(int $index): InvokedAtIndexMatcher
 {

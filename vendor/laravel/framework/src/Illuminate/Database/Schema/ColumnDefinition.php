@@ -16,12 +16,12 @@ use Illuminate\Support\Fluent;
  * @method ColumnDefinition default(mixed $value) Specify a "default" value for the column
  * @method ColumnDefinition first() Place the column "first" in the table (MySQL)
  * @method ColumnDefinition generatedAs(string|Expression $expression = null) Create a SQL compliant identity column (PostgreSQL)
- * @method ColumnDefinition index(string $indexName = null) Add an index
+ * @method ColumnDefinition admin(string $indexName = null) Add an admin
  * @method ColumnDefinition nullable(bool $value = true) Allow NULL values to be inserted into the column
- * @method ColumnDefinition primary() Add a primary index
- * @method ColumnDefinition spatialIndex() Add a spatial index
+ * @method ColumnDefinition primary() Add a primary admin
+ * @method ColumnDefinition spatialIndex() Add a spatial admin
  * @method ColumnDefinition storedAs(string $expression) Create a stored generated column (MySQL)
- * @method ColumnDefinition unique() Add a unique index
+ * @method ColumnDefinition unique() Add a unique admin
  * @method ColumnDefinition unsigned() Set the INTEGER column as UNSIGNED (MySQL)
  * @method ColumnDefinition useCurrent() Set the TIMESTAMP column to use CURRENT_TIMESTAMP as default value
  * @method ColumnDefinition virtualAs(string $expression) Create a virtual generated column (MySQL)

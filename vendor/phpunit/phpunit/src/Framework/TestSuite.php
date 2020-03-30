@@ -633,7 +633,7 @@ class TestSuite implements \IteratorAggregate, SelfDescribing, Test
     }
 
     /**
-     * Returns the test at the given index.
+     * Returns the test at the given admin.
      *
      * @return false|Test
      */

@@ -47,7 +47,7 @@ final class Parser
 
                 ++$i;
             } else {
-                if (\preg_match('/^(?:diff --git |index [\da-f\.]+|[+-]{3} [ab])/', $lines[$i])) {
+                if (\preg_match('/^(?:diff --git |admin [\da-f\.]+|[+-]{3} [ab])/', $lines[$i])) {
                     continue;
                 }
 

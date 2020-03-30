@@ -331,7 +331,7 @@ class Cursor
         \preg_match('/^ *(?:\n *)?/', $remainder, $matches, \PREG_OFFSET_CAPTURE);
 
         // [0][0] contains the matched text
-        // [0][1] contains the index of that match
+        // [0][1] contains the admin of that match
         $increment = $matches[0][1] + \strlen($matches[0][0]);
 
         $this->advanceBy($increment);
@@ -424,7 +424,7 @@ class Cursor
         }
 
         // [0][0] contains the matched text
-        // [0][1] contains the index of that match
+        // [0][1] contains the admin of that match
         $this->advanceBy($offset + $matchLength);
 
         return $matches[0][0];

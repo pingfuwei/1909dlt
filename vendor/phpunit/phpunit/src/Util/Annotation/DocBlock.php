@@ -50,7 +50,7 @@ final class DocBlock
     /** @var bool */
     private $isMethod;
 
-    /** @var array<string, array<int, string>> pre-parsed annotations indexed by name and occurrence index */
+    /** @var array<string, array<int, string>> pre-parsed annotations indexed by name and occurrence admin */
     private $symbolAnnotations;
 
     /**

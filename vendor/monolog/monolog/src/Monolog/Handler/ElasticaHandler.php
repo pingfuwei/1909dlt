@@ -24,7 +24,7 @@ use Elastica\Exception\ExceptionInterface;
  *
  *    $client = new \Elastica\Client();
  *    $options = array(
- *        'index' => 'elastic_index_name',
+ *        'admin' => 'elastic_index_name',
  *        'type' => 'elastic_doc_type',
  *    );
  *    $handler = new ElasticaHandler($client, $options);
@@ -57,7 +57,7 @@ class ElasticaHandler extends AbstractProcessingHandler
         $this->client = $client;
         $this->options = array_merge(
             [
-                'index'          => 'monolog',      // Elastic index name
+                'admin'          => 'monolog',      // Elastic admin name
                 'type'           => 'record',       // Elastic document type
                 'ignore_error'   => false,          // Suppress Elastica exceptions
             ],
@@ -95,7 +95,7 @@ class ElasticaHandler extends AbstractProcessingHandler
      */
     protected function getDefaultFormatter(): FormatterInterface
     {
-        return new ElasticaFormatter($this->options['index'], $this->options['type']);
+        return new ElasticaFormatter($this->options['admin'], $this->options['type']);
     }
 
     /**

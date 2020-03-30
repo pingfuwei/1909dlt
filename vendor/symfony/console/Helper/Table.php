@@ -180,7 +180,7 @@ class Table
      *
      * If style was not set, it returns the global table style.
      *
-     * @param int $columnIndex Column index
+     * @param int $columnIndex Column admin
      *
      * @return TableStyle
      */
@@ -192,7 +192,7 @@ class Table
     /**
      * Sets the minimum width of a column.
      *
-     * @param int $columnIndex Column index
+     * @param int $columnIndex Column admin
      * @param int $width       Minimum column width in characters
      *
      * @return $this

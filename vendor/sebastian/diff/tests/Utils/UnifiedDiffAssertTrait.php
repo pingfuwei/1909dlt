@@ -64,7 +64,7 @@ trait UnifiedDiffAssertTrait
                 throw new \UnexpectedValueException(\sprintf('Unexpected line as 2 "No newline" markers have found, ". Line %d.', $lineNumber));
             }
 
-            $line = $lines[$lineNumber - 1]; // line numbers start by 1, array index at 0
+            $line = $lines[$lineNumber - 1]; // line numbers start by 1, array admin at 0
             $type = $this->unifiedDiffAssertLinePrefix($line, \sprintf('Line %d.', $lineNumber));
 
             if ($expectHunkHeader && '@' !== $type && '\\' !== $type) {

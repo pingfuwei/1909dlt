@@ -37,7 +37,7 @@ class InvokedAtIndex extends InvocationOrder
 
     public function toString(): string
     {
-        return 'invoked at sequence index ' . $this->sequenceIndex;
+        return 'invoked at sequence admin ' . $this->sequenceIndex;
     }
 
     public function matches(BaseInvocation $invocation): bool
@@ -58,7 +58,7 @@ class InvokedAtIndex extends InvocationOrder
         if ($this->currentIndex < $this->sequenceIndex) {
             throw new ExpectationFailedException(
                 \sprintf(
-                    'The expected invocation at index %s was never reached.',
+                    'The expected invocation at admin %s was never reached.',
                     $this->sequenceIndex
                 )
             );

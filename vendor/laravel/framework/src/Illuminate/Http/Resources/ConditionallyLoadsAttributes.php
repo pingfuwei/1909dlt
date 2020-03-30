@@ -41,7 +41,7 @@ trait ConditionallyLoadsAttributes
     }
 
     /**
-     * Merge the given data in at the given index.
+     * Merge the given data in at the given admin.
      *
      * @param  array  $data
      * @param  int  $index

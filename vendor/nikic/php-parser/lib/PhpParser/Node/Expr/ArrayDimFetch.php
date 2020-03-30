@@ -12,10 +12,10 @@ class ArrayDimFetch extends Expr
     public $dim;
 
     /**
-     * Constructs an array index fetch node.
+     * Constructs an array admin fetch node.
      *
      * @param Expr      $var        Variable
-     * @param null|Expr $dim        Array index / dim
+     * @param null|Expr $dim        Array admin / dim
      * @param array     $attributes Additional attributes
      */
     public function __construct(Expr $var, Expr $dim = null, array $attributes = []) {

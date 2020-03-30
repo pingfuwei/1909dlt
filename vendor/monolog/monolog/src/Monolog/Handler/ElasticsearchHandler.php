@@ -32,7 +32,7 @@ use Elasticsearch\Client;
  *        ->build();
  *
  *    $options = array(
- *        'index' => 'elastic_index_name',
+ *        'admin' => 'elastic_index_name',
  *        'type'  => 'elastic_doc_type',
  *    );
  *    $handler = new ElasticsearchHandler($client, $options);
@@ -65,7 +65,7 @@ class ElasticsearchHandler extends AbstractProcessingHandler
         $this->client = $client;
         $this->options = array_merge(
             [
-                'index'        => 'monolog', // Elastic index name
+                'admin'        => 'monolog', // Elastic admin name
                 'type'         => '_doc',    // Elastic document type
                 'ignore_error' => false,     // Suppress Elasticsearch exceptions
             ],
@@ -108,7 +108,7 @@ class ElasticsearchHandler extends AbstractProcessingHandler
      */
     protected function getDefaultFormatter(): FormatterInterface
     {
-        return new ElasticsearchFormatter($this->options['index'], $this->options['type']);
+        return new ElasticsearchFormatter($this->options['admin'], $this->options['type']);
     }
 
     /**
@@ -135,7 +135,7 @@ class ElasticsearchHandler extends AbstractProcessingHandler
 
             foreach ($records as $record) {
                 $params['body'][] = [
-                    'index' => [
+                    'admin' => [
                         '_index' => $record['_index'],
                         '_type'  => $record['_type'],
                     ],
@@ -167,12 +167,12 @@ class ElasticsearchHandler extends AbstractProcessingHandler
     protected function createExceptionFromResponses(array $responses): ElasticsearchRuntimeException
     {
         foreach ($responses['items'] ?? [] as $item) {
-            if (isset($item['index']['error'])) {
-                return $this->createExceptionFromError($item['index']['error']);
+            if (isset($item['admin']['error'])) {
+                return $this->createExceptionFromError($item['admin']['error']);
             }
         }
 
-        return new ElasticsearchRuntimeException('Elasticsearch failed to index one or more records.');
+        return new ElasticsearchRuntimeException('Elasticsearch failed to admin one or more records.');
     }
 
     /**

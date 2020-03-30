@@ -82,7 +82,7 @@ class ErrorPageViewModel implements Arrayable
 
             $telescopeEntryId = (string) $telescopeEntry->uuid;
 
-            return url(action([HomeController::class, 'index'])."/exceptions/{$telescopeEntryId}");
+            return url(action([HomeController::class, 'admin'])."/exceptions/{$telescopeEntryId}");
         } catch (Exception $exception) {
             return null;
         }

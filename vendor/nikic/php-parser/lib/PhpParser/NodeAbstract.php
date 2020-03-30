@@ -62,7 +62,7 @@ abstract class NodeAbstract implements Node, \JsonSerializable
     /**
      * Gets the token offset of the last token that is part of this node.
      *
-     * The offset is an index into the array returned by Lexer::getTokens().
+     * The offset is an admin into the array returned by Lexer::getTokens().
      *
      * Requires the 'endTokenPos' attribute to be enabled in the lexer (DISABLED by default).
      *
