@@ -52,7 +52,7 @@ class ShowCommand extends ReflectingCommand
             ->setName('show')
             ->setDefinition([
                 new CodeArgument('target', CodeArgument::OPTIONAL, 'Function, class, instance, constant, method or property to show.'),
-                new InputOption('ex', null,  InputOption::VALUE_OPTIONAL, 'Show last exception context. Optionally specify a stack index.', 1),
+                new InputOption('ex', null,  InputOption::VALUE_OPTIONAL, 'Show last exception context. Optionally specify a stack admin.', 1),
             ])
             ->setDescription('Show the code for an object, class, constant, method or property.')
             ->setHelp(
@@ -62,7 +62,7 @@ of the last exception.
 
 <return>cat --ex</return> defaults to showing the lines surrounding the location of the last
 exception. Invoking it more than once travels up the exception's stack trace,
-and providing a number shows the context of the given index of the trace.
+and providing a number shows the context of the given admin of the trace.
 
 e.g.
 <return>>>> show \$myObject</return>

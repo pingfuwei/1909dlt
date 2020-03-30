@@ -156,7 +156,7 @@ class Request extends SymfonyRequest implements Arrayable, ArrayAccess
     }
 
     /**
-     * Get a segment from the URI (1 based index).
+     * Get a segment from the URI (1 based admin).
      *
      * @param  int  $index
      * @param  string|null  $default

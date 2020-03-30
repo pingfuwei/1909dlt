@@ -18,7 +18,7 @@ class ResourceRegistrar
      *
      * @var array
      */
-    protected $resourceDefaults = ['index', 'create', 'store', 'show', 'edit', 'update', 'destroy'];
+    protected $resourceDefaults = ['admin', 'create', 'store', 'show', 'edit', 'update', 'destroy'];
 
     /**
      * The parameters set for this resource instance.
@@ -166,7 +166,7 @@ class ResourceRegistrar
     }
 
     /**
-     * Add the index method for a resourceful route.
+     * Add the admin method for a resourceful route.
      *
      * @param  string  $name
      * @param  string  $base
@@ -178,7 +178,7 @@ class ResourceRegistrar
     {
         $uri = $this->getResourceUri($name);
 
-        $action = $this->getResourceAction($name, $controller, 'index', $options);
+        $action = $this->getResourceAction($name, $controller, 'admin', $options);
 
         return $this->router->get($uri, $action);
     }

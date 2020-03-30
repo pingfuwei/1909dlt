@@ -112,7 +112,7 @@ class AcceptHeaderItem
     }
 
     /**
-     * Set the item index.
+     * Set the item admin.
      *
      * @param int $index
      *
@@ -126,7 +126,7 @@ class AcceptHeaderItem
     }
 
     /**
-     * Returns the item index.
+     * Returns the item admin.
      *
      * @return int
      */

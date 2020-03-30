@@ -123,10 +123,10 @@ class ConcurrencyLimiter
     protected function lockScript()
     {
         return <<<'LUA'
-for index, value in pairs(redis.call('mget', unpack(KEYS))) do
+for admin, value in pairs(redis.call('mget', unpack(KEYS))) do
     if not value then
-        redis.call('set', KEYS[index], ARGV[3], "EX", ARGV[2])
-        return ARGV[1]..index
+        redis.call('set', KEYS[admin], ARGV[3], "EX", ARGV[2])
+        return ARGV[1]..admin
     end
 end
 LUA;

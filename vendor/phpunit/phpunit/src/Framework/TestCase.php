@@ -333,7 +333,7 @@ abstract class TestCase extends Assert implements SelfDescribing, Test
 
     /**
      * Returns a matcher that matches when the method is executed
-     * at the given index.
+     * at the given admin.
      */
     public static function at(int $index): InvokedAtIndexMatcher
     {

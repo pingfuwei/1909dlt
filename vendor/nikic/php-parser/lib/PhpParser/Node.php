@@ -46,7 +46,7 @@ interface Node
     /**
      * Gets the token offset of the first token that is part of this node.
      *
-     * The offset is an index into the array returned by Lexer::getTokens().
+     * The offset is an admin into the array returned by Lexer::getTokens().
      *
      * Requires the 'startTokenPos' attribute to be enabled in the lexer (DISABLED by default).
      *
@@ -57,7 +57,7 @@ interface Node
     /**
      * Gets the token offset of the last token that is part of this node.
      *
-     * The offset is an index into the array returned by Lexer::getTokens().
+     * The offset is an admin into the array returned by Lexer::getTokens().
      *
      * Requires the 'endTokenPos' attribute to be enabled in the lexer (DISABLED by default).
      *

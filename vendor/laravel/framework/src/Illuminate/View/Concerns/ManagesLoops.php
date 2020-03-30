@@ -28,7 +28,7 @@ trait ManagesLoops
 
         $this->loopsStack[] = [
             'iteration' => 0,
-            'index' => 0,
+            'admin' => 0,
             'remaining' => $length ?? null,
             'count' => $length,
             'first' => true,
@@ -51,7 +51,7 @@ trait ManagesLoops
 
         $this->loopsStack[$index] = array_merge($this->loopsStack[$index], [
             'iteration' => $loop['iteration'] + 1,
-            'index' => $loop['iteration'],
+            'admin' => $loop['iteration'],
             'first' => $loop['iteration'] == 0,
             'odd' => ! $loop['odd'],
             'even' => ! $loop['even'],

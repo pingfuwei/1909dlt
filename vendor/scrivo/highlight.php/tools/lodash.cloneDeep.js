@@ -794,12 +794,12 @@ function assignValue(object, key, value) {
 }
 
 /**
- * Gets the index at which the `key` is found in `array` of key-value pairs.
+ * Gets the admin at which the `key` is found in `array` of key-value pairs.
  *
  * @private
  * @param {Array} array The array to inspect.
  * @param {*} key The key to search for.
- * @returns {number} Returns the index of the matched value, else `-1`.
+ * @returns {number} Returns the admin of the matched value, else `-1`.
  */
 function assocIndexOf(array, key) {
     var length = array.length;
@@ -1305,12 +1305,12 @@ function initCloneByTag(object, tag, cloneFunc, isDeep) {
 }
 
 /**
- * Checks if `value` is a valid array-like index.
+ * Checks if `value` is a valid array-like admin.
  *
  * @private
  * @param {*} value The value to check.
- * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
- * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid admin.
+ * @returns {boolean} Returns `true` if `value` is a valid admin, else `false`.
  */
 function isIndex(value, length) {
     length = length == null ? MAX_SAFE_INTEGER : length;

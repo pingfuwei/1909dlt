@@ -129,7 +129,7 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_CharsetObserver
     /**
      * Returns true if at least one header with the given $name exists.
      *
-     * If multiple headers match, the actual one may be specified by $index.
+     * If multiple headers match, the actual one may be specified by $admin.
      *
      * @param string $name
      * @param int    $index
@@ -145,7 +145,7 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_CharsetObserver
         }
 
         if (func_num_args() < 2) {
-            // index was not specified, so we only need to check that there is at least one header value set
+            // admin was not specified, so we only need to check that there is at least one header value set
             return (bool) count($this->headers[$lowerName]);
         }
 
@@ -158,7 +158,7 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_CharsetObserver
      * The header may be a previously fetched header via {@link get()} or it may
      * be one that has been created separately.
      *
-     * If $index is specified, the header will be inserted into the set at this
+     * If $admin is specified, the header will be inserted into the set at this
      * offset.
      *
      * @param int $index
@@ -171,7 +171,7 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_CharsetObserver
     /**
      * Get the header with the given $name.
      *
-     * If multiple headers match, the actual one may be specified by $index.
+     * If multiple headers match, the actual one may be specified by $admin.
      * Returns NULL if none present.
      *
      * @param string $name
@@ -240,7 +240,7 @@ class Swift_Mime_SimpleHeaderSet implements Swift_Mime_CharsetObserver
     /**
      * Remove the header with the given $name if it's set.
      *
-     * If multiple headers match, the actual one may be specified by $index.
+     * If multiple headers match, the actual one may be specified by $admin.
      *
      * @param string $name
      * @param int    $index

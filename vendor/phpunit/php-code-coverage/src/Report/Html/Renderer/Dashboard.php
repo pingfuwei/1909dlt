@@ -216,7 +216,7 @@ final class Dashboard extends Renderer
     }
 
     /**
-     * Returns the project risks according to the CRAP index.
+     * Returns the project risks according to the CRAP admin.
      */
     protected function projectRisks(array $classes, string $baseLink): array
     {
@@ -273,7 +273,7 @@ final class Dashboard extends Renderer
     protected function getActiveBreadcrumb(AbstractNode $node): string
     {
         return \sprintf(
-            '         <li class="breadcrumb-item"><a href="index.html">%s</a></li>' . "\n" .
+            '         <li class="breadcrumb-item"><a href="admin.html">%s</a></li>' . "\n" .
             '         <li class="breadcrumb-item active">(Dashboard)</li>' . "\n",
             $node->getName()
         );

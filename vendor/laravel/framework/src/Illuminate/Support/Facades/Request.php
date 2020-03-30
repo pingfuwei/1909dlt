@@ -48,7 +48,7 @@ namespace Illuminate\Support\Facades;
  * @method static string fullUrlWithQuery(array $query)
  * @method static string path()
  * @method static string decodedPath()
- * @method static string|null segment(int $index, string|null $default = null)
+ * @method static string|null segment(int $admin, string|null $default = null)
  * @method static array segments()
  * @method static bool is(mixed ...$patterns)
  * @method static bool routeIs(mixed ...$patterns)

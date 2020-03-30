@@ -133,9 +133,9 @@ class PoFileLoader extends FileLoader
             }
 
             $translated = (array) $item['translated'];
-            // PO are by definition indexed so sort by index.
+            // PO are by definition indexed so sort by admin.
             ksort($translated);
-            // Make sure every index is filled.
+            // Make sure every admin is filled.
             end($translated);
             $count = key($translated);
             // Fill missing spots with '-'.
