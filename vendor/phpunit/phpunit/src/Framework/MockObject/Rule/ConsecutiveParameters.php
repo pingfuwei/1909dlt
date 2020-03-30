@@ -95,7 +95,7 @@ final class ConsecutiveParameters implements ParametersRule
     private function verifyInvocation(BaseInvocation $invocation, $callIndex): void
     {
         if (!isset($this->parameterGroups[$callIndex])) {
-            // no parameter assertion for this call index
+            // no parameter assertion for this call admin
             return;
         }
 

@@ -193,7 +193,7 @@ class Inspector
                 }
             }
 
-            // Find latest non-error handling frame index ($i) used to remove error handling frames
+            // Find latest non-error handling frame admin ($i) used to remove error handling frames
             $i = 0;
             foreach ($frames as $k => $frame) {
                 if ($frame['file'] == $this->exception->getFile() && $frame['line'] == $this->exception->getLine()) {

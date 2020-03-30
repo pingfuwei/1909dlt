@@ -42,7 +42,7 @@ use Symfony\Component\Routing\RouteCompiler;
  *         /**
  *          * @Route("/", name="blog_index")
  *          * /
- *         public function index()
+ *         public function admin()
  *         {
  *         }
  *         /**

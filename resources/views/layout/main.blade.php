@@ -33,6 +33,7 @@
                     <li ><a href="{{url('admin/create')}}">管理员模块</a></li>
                 @endif
                 @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\BrandController@create")
+<<<<<<< HEAD
                     <li style="background: gold"><a href="{{url('/sln/create')}}">业务员模块</a></li>
                 @else
                     <li><a href="{{url('/sln/create')}}">业务员模块</a></li>
@@ -46,6 +47,21 @@
                     <li style="background: gold"><a href="{{url('goods/create')}}">拜访会议模块</a></li>
                 @else
                     <li ><a href="{{url('goods/create')}}">拜访会议模块</a></li>
+=======
+                    <li style="background: gold"><a href="{{url('brand/create')}}">业务员模块</a></li>
+                @else
+                    <li><a href="{{url('brand/create')}}">业务员模块</a></li>
+                @endif
+                @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\CategoryController@create")
+                    <li style="background:gold"><a href="{{url('Category/create')}}">客户模块</a></li>
+                @else
+                    <li ><a href="{{url('Category/create')}}">客户模块</a></li>
+                @endif
+                @if(request()->route()->getAction()["uses"]=="App\Http\Controllers\GoodsController@create")
+                    <li style="background: gold"><a href="{{url('acc/create')}}">拜访会议模块</a></li>
+                @else
+                    <li ><a href="{{url('acc/create')}}">拜访会议模块</a></li>
+>>>>>>> 77a020a967d5b7ee5e4793ae8028986d93b172ef
                 @endif
             </ul>
             <img src="/8.jpg" width="50" height="50" style="float: right" alt="">

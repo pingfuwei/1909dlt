@@ -105,7 +105,7 @@ class SqlServerGrammar extends Grammar
      */
     public function compileUnique(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('create unique index %s on %s (%s)',
+        return sprintf('create unique admin %s on %s (%s)',
             $this->wrap($command->index),
             $this->wrapTable($blueprint),
             $this->columnize($command->columns)
@@ -113,7 +113,7 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-     * Compile a plain index key command.
+     * Compile a plain admin key command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -121,7 +121,7 @@ class SqlServerGrammar extends Grammar
      */
     public function compileIndex(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('create index %s on %s (%s)',
+        return sprintf('create admin %s on %s (%s)',
             $this->wrap($command->index),
             $this->wrapTable($blueprint),
             $this->columnize($command->columns)
@@ -129,7 +129,7 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-     * Compile a spatial index key command.
+     * Compile a spatial admin key command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -137,7 +137,7 @@ class SqlServerGrammar extends Grammar
      */
     public function compileSpatialIndex(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('create spatial index %s on %s (%s)',
+        return sprintf('create spatial admin %s on %s (%s)',
             $this->wrap($command->index),
             $this->wrapTable($blueprint),
             $this->columnize($command->columns)
@@ -242,11 +242,11 @@ class SqlServerGrammar extends Grammar
     {
         $index = $this->wrap($command->index);
 
-        return "drop index {$index} on {$this->wrapTable($blueprint)}";
+        return "drop admin {$index} on {$this->wrapTable($blueprint)}";
     }
 
     /**
-     * Compile a drop index command.
+     * Compile a drop admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -256,11 +256,11 @@ class SqlServerGrammar extends Grammar
     {
         $index = $this->wrap($command->index);
 
-        return "drop index {$index} on {$this->wrapTable($blueprint)}";
+        return "drop admin {$index} on {$this->wrapTable($blueprint)}";
     }
 
     /**
-     * Compile a drop spatial index command.
+     * Compile a drop spatial admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -300,7 +300,7 @@ class SqlServerGrammar extends Grammar
     }
 
     /**
-     * Compile a rename index command.
+     * Compile a rename admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command

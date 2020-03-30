@@ -210,7 +210,7 @@ abstract class Renderer
         $id    = $node->getId();
         $depth = \substr_count($id, '/');
 
-        if ($id !== 'index' &&
+        if ($id !== 'admin' &&
             $node instanceof DirectoryNode) {
             $depth++;
         }

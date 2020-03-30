@@ -43,7 +43,7 @@ class Presenter
         'private'   => 'private',
         'meta'      => 'comment',
         'key'       => 'comment',
-        'index'     => 'number',
+        'admin'     => 'number',
     ];
 
     public function __construct(OutputFormatter $formatter, $forceArrayIndexes = false)

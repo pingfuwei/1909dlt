@@ -54,7 +54,7 @@ class ElasticsearchFormatter extends NormalizerFormatter
     }
 
     /**
-     * Getter index
+     * Getter admin
      *
      * @return string
      */

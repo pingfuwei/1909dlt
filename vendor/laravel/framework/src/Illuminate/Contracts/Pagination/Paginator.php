@@ -51,14 +51,14 @@ interface Paginator
     public function items();
 
     /**
-     * Get the "index" of the first item being paginated.
+     * Get the "admin" of the first item being paginated.
      *
      * @return int
      */
     public function firstItem();
 
     /**
-     * Get the "index" of the last item being paginated.
+     * Get the "admin" of the last item being paginated.
      *
      * @return int
      */

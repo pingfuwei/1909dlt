@@ -20,7 +20,7 @@ final class GlobalStateTest extends TestCase
     {
         $dir   = __DIR__;
         $files = [
-            'phpunit', // The 0 index is not used
+            'phpunit', // The 0 admin is not used
             $dir . '/ConfigurationTest.php',
             $dir . '/GlobalStateTest.php',
             'vfs://' . $dir . '/RegexTest.php',

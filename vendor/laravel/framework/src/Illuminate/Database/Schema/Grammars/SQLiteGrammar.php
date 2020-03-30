@@ -151,7 +151,7 @@ class SQLiteGrammar extends Grammar
      */
     public function compileUnique(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('create unique index %s on %s (%s)',
+        return sprintf('create unique admin %s on %s (%s)',
             $this->wrap($command->index),
             $this->wrapTable($blueprint),
             $this->columnize($command->columns)
@@ -159,7 +159,7 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-     * Compile a plain index key command.
+     * Compile a plain admin key command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -167,7 +167,7 @@ class SQLiteGrammar extends Grammar
      */
     public function compileIndex(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('create index %s on %s (%s)',
+        return sprintf('create admin %s on %s (%s)',
             $this->wrap($command->index),
             $this->wrapTable($blueprint),
             $this->columnize($command->columns)
@@ -175,7 +175,7 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-     * Compile a spatial index key command.
+     * Compile a spatial admin key command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -231,7 +231,7 @@ class SQLiteGrammar extends Grammar
      */
     public function compileDropAllTables()
     {
-        return "delete from sqlite_master where type in ('table', 'index', 'trigger')";
+        return "delete from sqlite_master where type in ('table', admin, 'trigger')";
     }
 
     /**
@@ -288,11 +288,11 @@ class SQLiteGrammar extends Grammar
     {
         $index = $this->wrap($command->index);
 
-        return "drop index {$index}";
+        return "drop admin {$index}";
     }
 
     /**
-     * Compile a drop index command.
+     * Compile a drop admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -302,11 +302,11 @@ class SQLiteGrammar extends Grammar
     {
         $index = $this->wrap($command->index);
 
-        return "drop index {$index}";
+        return "drop admin {$index}";
     }
 
     /**
-     * Compile a drop spatial index command.
+     * Compile a drop spatial admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -334,7 +334,7 @@ class SQLiteGrammar extends Grammar
     }
 
     /**
-     * Compile a rename index command.
+     * Compile a rename admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command

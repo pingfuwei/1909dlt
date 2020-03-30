@@ -46,7 +46,7 @@ class TestDoxPrinter extends ResultPrinter
     protected $testResults = [];
 
     /**
-     * @var array<string, int> Lookup table for testname to testResults[index]
+     * @var array<string, int> Lookup table for testname to testResults[admin]
      */
     protected $testNameResultIndex = [];
 

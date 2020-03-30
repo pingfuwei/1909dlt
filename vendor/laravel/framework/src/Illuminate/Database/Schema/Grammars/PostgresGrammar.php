@@ -117,7 +117,7 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-     * Compile a plain index key command.
+     * Compile a plain admin key command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -125,7 +125,7 @@ class PostgresGrammar extends Grammar
      */
     public function compileIndex(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('create index %s on %s%s (%s)',
+        return sprintf('create admin %s on %s%s (%s)',
             $this->wrap($command->index),
             $this->wrapTable($blueprint),
             $command->algorithm ? ' using '.$command->algorithm : '',
@@ -134,7 +134,7 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-     * Compile a spatial index key command.
+     * Compile a spatial admin key command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -305,7 +305,7 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-     * Compile a drop index command.
+     * Compile a drop admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -313,11 +313,11 @@ class PostgresGrammar extends Grammar
      */
     public function compileDropIndex(Blueprint $blueprint, Fluent $command)
     {
-        return "drop index {$this->wrap($command->index)}";
+        return "drop admin {$this->wrap($command->index)}";
     }
 
     /**
-     * Compile a drop spatial index command.
+     * Compile a drop spatial admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -357,7 +357,7 @@ class PostgresGrammar extends Grammar
     }
 
     /**
-     * Compile a rename index command.
+     * Compile a rename admin command.
      *
      * @param  \Illuminate\Database\Schema\Blueprint  $blueprint
      * @param  \Illuminate\Support\Fluent  $command
@@ -365,7 +365,7 @@ class PostgresGrammar extends Grammar
      */
     public function compileRenameIndex(Blueprint $blueprint, Fluent $command)
     {
-        return sprintf('alter index %s rename to %s',
+        return sprintf('alter admin %s rename to %s',
             $this->wrap($command->from),
             $this->wrap($command->to)
         );

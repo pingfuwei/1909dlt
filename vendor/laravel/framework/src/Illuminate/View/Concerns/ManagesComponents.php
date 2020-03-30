@@ -135,7 +135,7 @@ trait ManagesComponents
     }
 
     /**
-     * Get the index for the current component.
+     * Get the admin for the current component.
      *
      * @return int
      */
