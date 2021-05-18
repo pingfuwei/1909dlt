@@ -1,5 +1,5 @@
 <?php
-//dwadawdpfw`修dwadawdawd改
+//修dwadawdawd改
 /**
  * Laravel - A PHP Framework For Web Artisans
  *
